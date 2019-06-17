@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ПОИСК ПОЛЬЗОВАТЕЛЕЙ"
+        android:textAlignment="center"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:id="@+id/search_tv"
+        android:layout_marginBottom="20dp"
+        />
+    <RelativeLayout
+        android:layout_below="@+id/search_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/relLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <include layout="@layout/snippet_searchbar" />
+
+        </RelativeLayout>
+
+        <ListView
+            android:id="@+id/listView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/relLayout1"
+            android:paddingBottom="50dp">
+
+        </ListView>
+
+        <include layout="@layout/layout_bottom_navigation_view" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
